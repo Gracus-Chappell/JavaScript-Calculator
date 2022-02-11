@@ -52,7 +52,7 @@ function buttonCalculate() {
       document.getElementById("display").innerHTML = calculation[0];
       break;
     case "multiply":
-      calculation[0] = calculation[0] * parseInt(calculation[2]);
+      calculation[0] = calculation[0] * parseInt(calculation[1]);
       calculation[1] = "";
       document.getElementById("display").innerHTML = calculation[0];
       break;
