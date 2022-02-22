@@ -1,0 +1,79 @@
+#container {
+    position: relative;
+    height: 545px;
+    width: 400px;
+    background-color: rgb(99, 99, 99);
+    border-radius: 10px;
+    box-shadow: 5px 10px black;
+}
+
+#display {
+    position: relative;
+    top: 20px;
+    margin: 20px;
+    padding: 10px;
+    font-family: cursive;
+    font-weight: bold;
+    font-size: 62px;
+    direction: ltr;
+    text-align: right;
+    box-shadow: 5px, 150px black inset;
+    background-color: rgb(188, 255, 255);
+    border-radius: 10px;
+}
+
+#buttonArea {
+    display: grid;
+    gap: 1px;
+    padding: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);   
+}
+
+.item1 {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+}
+
+.item2 {
+    grid-column: 3 / span 2;
+    grid-row: 1;
+}
+
+.item3 {
+    grid-column: 4;
+    grid-row: 2;
+}
+
+.item4 {
+    grid-column: 4;
+    grid-row: 3;
+}
+
+.item5 {
+    grid-column: 4;
+    grid-row: 4;
+}
+
+.item6 {
+    grid-column: 4;
+    grid-row: 5;
+}
+
+.item7 {
+    grid-column: 3;
+    grid-row: 5;
+}
+.numberButtons {
+    height: 75px;
+    font-family: cursive;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 35px;
+}
+
+/* .operatorButtons {
+    background-color: darkgray;
+    border: none;
+
+} */
