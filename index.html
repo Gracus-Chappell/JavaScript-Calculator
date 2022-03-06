@@ -11,8 +11,8 @@
     <div id = "container">
         <div id = "display">0</div>
         <div id = "buttonArea">
-            <button id = "negativePositive" class = "numberButtons item1" onclick="buttonFunctions(this.id)">-/+</button>
-            <button id = "clear" class = "numberButtons item2" onclick="buttonFunctions(this.id)">C</button>
+            <button id = "negativePositive" class = "numberButtons operatorButtons negativePositivePosition" onclick="buttonFunctions(this.id)">-/+</button>
+            <button id = "clear" class = "numberButtons clearButton clearPosition" onclick="buttonFunctions(this.id)">C</button>
             <button id = "1" class = "numberButtons" onclick="buttonNumbers(this.id)">1</button>
             <button id = "2" class = "numberButtons" onclick="buttonNumbers(this.id)">2</button>
             <button id = "3" class = "numberButtons" onclick="buttonNumbers(this.id)">3</button>
@@ -22,14 +22,13 @@
             <button id = "7" class = "numberButtons" onclick="buttonNumbers(this.id)">7</button>
             <button id = "8" class = "numberButtons" onclick="buttonNumbers(this.id)">8</button>
             <button id = "9" class = "numberButtons" onclick="buttonNumbers(this.id)">9</button>
-            <button id = "0" class = "numberButtons" onclick="buttonNumbers(this.id)">0</button>
-            <button id = "decimalPoint" class = "numberButtons" onclick="buttonFunctions(this.id)">.</button>
-            
-            <button id = "add" class = "numberButtons operatorButtons item3" onclick="buttonOperator(this.id)">+</button>
-            <button id = "subtract" class = "numberButtons item4" onclick="buttonOperator(this.id)">-</button>
-            <button id = "multiply" class = "numberButtons item5" onclick="buttonOperator(this.id)">*</button>
-            <button id = "divide" class = "numberButtons item6" onclick="buttonOperator(this.id)">/</button>
-            <button class = "numberButtons item7" onclick="buttonCalculate()">=</button>
+            <button id = "0" class = "numberButtons zero" onclick="buttonNumbers(this.id)">0</button>
+            <button id = "decimalPoint" class = "numberButtons" onclick="buttonFunctions(this.id)">.</button> 
+            <button id = "add" class = "numberButtons operatorButtons addPosition" onclick="buttonOperator(this.id)">+</button>
+            <button id = "subtract" class = "numberButtons operatorButtons subtractPosition" onclick="buttonOperator(this.id)">-</button>
+            <button id = "multiply" class = "numberButtons operatorButtons multiplyPosition" onclick="buttonOperator(this.id)">*</button>
+            <button id = "divide" class = "numberButtons operatorButtons dividePosition" onclick="buttonOperator(this.id)">/</button>
+            <button class = "numberButtons calculateButton calculatePosition" onclick="buttonCalculate()">=</button>
         </div>
     </div>
     <script src="./js/main.js"></script>
