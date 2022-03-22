@@ -40,6 +40,10 @@ button {
     font-size: 35px;
 }
 
+button:active {
+    transform: translateY(1px);
+}
+
 button:hover {
     font-size: 37px;
 }
