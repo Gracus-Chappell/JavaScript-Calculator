@@ -33,6 +33,7 @@ function buttonNumbers(clicked_id) {
   answer !== "" || lastNumber == "0" ? (answer = "", lastNumber = "", lastNumber = lastNumber + clicked_id, lastNumber = lastNumber) : lastNumber = lastNumber + clicked_id;
   lastNumber.length > 9 ? lastNumber = lastNumber.substring(0,9) : "";
   document.getElementById("display").innerHTML = lastNumber;
+      
 }
 
 // Chosen operator is added to the operator variable.
@@ -59,7 +60,7 @@ function buttonOperator(clicked_id) {
       lastNumber = "0";
       break;
     case "":
-      answer !== "" ? firstNumber = lastNumber : firstNumber = parseFloat(lastNumber);
+      answer !== "" ? firstNumber = parseFloat(lastNumber) : firstNumber = parseFloat(lastNumber);
       lastNumber = "0";
   }
   operator = clicked_id;
