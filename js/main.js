@@ -1,8 +1,10 @@
 //Stores the last operator clicked.
 let operator = "";
-// If calculated is 1 then any number clicked will erase the previous calculated answer.
+// Stores the number into the firstNumber variable when the user presses an operator.
 let firstNumber = "";
+//The number that the user can input to the calculator.
 let lastNumber = "0";
+//When the user presses calculate, the answer is added to this variable.
 let answer = "";
 
 
@@ -18,7 +20,7 @@ function buttonFunctions(clicked_id) {
       break;
     case "negativePositive":
       lastNumber = lastNumber * -1;
-      document.getElementById("display").innerHTML = lastNumber;
+      document.getElementById("display").innerHTML = lastNumber.toString().substring(0,9);
       break;
     case "decimalPoint":
       lastNumber.includes(".") == true ? "" : lastNumber = lastNumber + ".";
@@ -26,14 +28,14 @@ function buttonFunctions(clicked_id) {
   }
 }
 
-//Chosen number is added to the calculation.
+//Chosen number is added to the lastNumber variable.
 function buttonNumbers(clicked_id) {
   answer !== "" || lastNumber == "0" ? (answer = "", lastNumber = "", lastNumber = lastNumber + clicked_id, lastNumber = lastNumber) : lastNumber = lastNumber + clicked_id;
   lastNumber.length > 9 ? lastNumber = lastNumber.substring(0,9) : "";
   document.getElementById("display").innerHTML = lastNumber;
 }
 
-// Chosen operator is added to the calculation.
+// Chosen operator is added to the operator variable.
 function buttonOperator(clicked_id) {
   switch (operator) {
     case "add":
@@ -63,7 +65,7 @@ function buttonOperator(clicked_id) {
   operator = clicked_id;
 }
 
-// Calculates the numbers and operators the user inputted.
+// Calculates the firstNumber and lastNumber variables based on which operator the user last clicked.
 function buttonCalculate() {
   switch (operator) {
     case "add":
